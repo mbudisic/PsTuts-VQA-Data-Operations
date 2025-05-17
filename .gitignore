@@ -2,3 +2,6 @@ __pycache__/
 .venv/ 
 .env
 .vscode/
+test.json
+train.json
+dev.json
