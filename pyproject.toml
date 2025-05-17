@@ -1,0 +1,17 @@
+[project]
+name = "pstuts-vqa-data-operations"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv",
+    "ragas",
+    "langchain_openai",
+    "huggingface_hub",
+    "langchain_core",
+    "aiofiles",
+]
+
+[project.optional-dependencies]
+dev = ["deptry>=0.23.0"]
