@@ -12,7 +12,12 @@ This is a toolkit for creating and manipulating Visual Question Answering (VQA) 
 - 🤖 Generate synthetic question-answer pairs for evaluation
 - 🧪 Support for creating RAG (Retrieval-Augmented Generation) test datasets
 
-## Getting Started 🚀
+## Related repos
+
+- [PsTuts-VQA RAG](https://github.com/mbudisic/pstuts-rag)
+- [HuggingFace PsTuts-VQA repo](https://huggingface.co/datasets/mbudisic/PsTuts-VQA)
+- [Adobe Research PsTuts-VQA repo](https://github.com/adobe-research/PsTuts-VQA-Dataset)
+- [Output HF dataset](https://huggingface.co/datasets/mbudisic/pstuts_rag_qa)
 
 ### Prerequisites
 
@@ -22,45 +27,13 @@ This is a toolkit for creating and manipulating Visual Question Answering (VQA) 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/PsTuts-VQA-Data-Operations.git
+git clone https://github.com/mbudisic/PsTuts-VQA-Data-Operations.git
 cd PsTuts-VQA-Data-Operations
 
-# Set up a virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
-
-# Install dependencies
-pip install -e .
+# Set up a virtual environment and install dependencies
+uv sync
 ```
 
-## Usage Examples 💡
-
-### Loading Video Transcripts
-
-```python
-from loader import VideoTranscriptBulkLoader
-import json
-
-# Load from a local JSON file
-with open("path/to/your/file.json", "r") as f:
-    json_payload = json.load(f)
-
-# Create documents from the transcripts
-docs = VideoTranscriptBulkLoader(json_payload=json_payload).load()
-```
-
-### Creating a Golden Dataset
-
-```python
-from create_golden_dataset import create_golden_dataset
-
-# Generate a test dataset with 10 question-answer pairs
-testset = create_golden_dataset(
-    docs=your_document_list,
-    testset_size=10,
-    group_name="photoshop_basics"
-)
-```
 
 ## Contributing 🤝
 
