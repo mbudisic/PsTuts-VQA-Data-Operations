@@ -5,3 +5,4 @@ __pycache__/
 test.json
 train.json
 dev.json
+*.json
